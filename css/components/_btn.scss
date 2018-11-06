@@ -1,0 +1,22 @@
+/* btn */
+
+.btn {
+  @include mix-btn ($white, $orange);
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-family: $Ubuntu;
+  font-weight: 500;
+  line-height: 35px;
+  height: 35px;
+  cursor: pointer;
+
+  &--red {
+    width: 96px;
+  }
+
+  &--black {
+    width: 110px;
+    background-color: $black;
+  }
+}

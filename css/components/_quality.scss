@@ -1,0 +1,31 @@
+/* quality block */ 
+
+.quality {
+  @include mix-flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 0 1 31%;
+  margin: 0;
+
+  &__img {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $Lifehack;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -.6px;
+  }
+  
+  &__text {
+    width: 100%;
+    margin: 0;
+    font-family: $Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    opacity: 0.8;
+  }
+}

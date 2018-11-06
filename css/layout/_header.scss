@@ -1,0 +1,4 @@
+.header {
+    @include mix-flex ($jc: space-between);
+    padding-top: 15px;
+}

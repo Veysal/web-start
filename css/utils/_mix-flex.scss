@@ -1,0 +1,7 @@
+/* mixin for base flex settings */
+
+@mixin mix-flex ($jc: flex-start, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}

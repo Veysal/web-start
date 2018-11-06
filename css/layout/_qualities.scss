@@ -1,0 +1,21 @@
+/* qualities section */
+
+.qualities {
+  background: url(/images/bg.png) center center / cover no-repeat;
+  
+  .container {
+    @include mix-flex ($jc: center);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title {
+    margin-bottom: 60px;
+  }
+
+  &-main {
+    @include mix-flex ($jc: space-around, $ai: baseline);
+  }
+
+  
+}

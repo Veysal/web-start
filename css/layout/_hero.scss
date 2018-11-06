@@ -1,0 +1,52 @@
+/* hero */
+
+.hero {
+  background: url(/images/video-bg.png) center center / cover no-repeat;
+  position: relative;
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/texture.png) center center / cover no-repeat;
+    opacity: 0.6;
+  }
+
+  &-main {
+    @include mix-flex($jc: space-between);
+  }
+
+  &-bottom {
+    @include mix-flex($jc: center);
+    margin-bottom: 40px;
+  }
+}
+
+
+.hero__description {
+
+  .title {
+    color: $yellow;
+    margin: 8px auto 22px;
+  }
+  
+  span {
+    font-family: $Lifehack;
+    color: $white;
+    font-size: 65px;
+    line-height: .9;
+    letter-spacing: -1.6px;
+    display: block;
+  }
+}
+

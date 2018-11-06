@@ -1,0 +1,45 @@
+/* nav styles */ 
+
+.nav {
+  margin-left: 25px;
+  height: 100%;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: $Ubuntu;
+}
+
+.nav__list {
+    display: flex;
+  }
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    color: $white;
+    text-align: left;
+    font-size: 13px;
+    margin-left: 15px;
+    transition: all .2s;
+      
+    &::before {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $white; 
+      margin-right: 15px;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+}
+
+.nav__item {
+  &:first-child {
+    .nav__link::before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+/* pagination styles*/ 
+
+.pagination {
+  position: fixed;
+  top: 80px;
+  right: 46px;
+
+  &__item {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 5px;
+  }
+
+  &__link::before,
+  &__link--active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid $white;
+  }
+  
+  &__link::before {
+    width: 4px;
+    height: 4px;
+    background-color: $white ;
+    
+  }
+  &__link--active::after {
+  width: 14px;
+  height: 14px;
+  top: 11px;
+  left: -5px;
+  }
+}

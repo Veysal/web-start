@@ -1,0 +1,11 @@
+/* main-burger */ 
+
+.main-burger {
+  margin-bottom: 50px;
+  margin-right: 12px;
+  position: relative;
+
+  &__img {
+    object-fit: contain;
+  }
+}
