@@ -1,9 +1,18 @@
-/* review-block */
+
 
 .review-block {
   flex: 1 1 25%;
   height: 50%;
   overflow: hidden;
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include tablets {
+    flex: 1 1 50%;
+    height: 25%;
+  }
   
   &__img {
     height: 100%;
@@ -25,17 +34,23 @@
 .review-block__list {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  right: 0;
-  margin: 0;
+  width: 100%;
+  height: 100%;
   color: $white;
   transition: all .2s;
   padding: 15% 12% 15% 10.8% ;
   opacity: 0;
+
+  @include tablets {
+    padding: 5% ;
+    align-items: center;
+  }
   
+  @include phones {
+    justify-content: center;
+    font-size: 1rem;
+  }
+
   &:hover {
     background: rgba(#000, .5);
     opacity: 1;
@@ -43,26 +58,50 @@
 }
 
 .review-block {
-  font-size: 14px;
-  height: 50%;
+  font-size: rem(14px);
   
   &__name {
     font-family: $Gagalin;
-    line-height: 28px;
-    margin-bottom: 30px;
+    line-height: rem(28px);
+    margin-bottom: rem(30px);
+
+    @include tablets {
+      margin-bottom: rem(-7px);
+    }
+
+    @include phones {
+      margin-bottom: rem(5px);
+    }
   }
   
   &__text {
-    height: 50%;
     padding-right: 8.2%;
-    margin: 0;
     font-family: $Ubuntu;
-    line-height: 24px;
+    line-height: rem(24px);
     overflow: hidden;
     text-overflow: ellipsis;
+    user-select: initial;
+
+    
+  @include desktop {
+    font-size: rem(12px);
+  }
+
+    @include tablets {
+      padding: 0;
+    }
+
+    @include phones {
+      display: none;
+    }
   }
 
   &__btn {
     margin-top: auto;
+
+    @include phones {
+      margin: 0;
+      content: "читать отзыв"
+    }
   }
 }

@@ -24,29 +24,62 @@
 
   &-main {
     @include mix-flex($jc: space-between);
+
+    @include desktop {
+      margin-left: rem(20px);
+    }
+
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center; 
+    }
   }
 
   &-bottom {
     @include mix-flex($jc: center);
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
   }
 }
 
 
 .hero__description {
+  max-width: 100%;
 
-  .title {
-    color: $yellow;
-    margin: 8px auto 22px;
+  @include tablets {
+    max-width: 100%;
   }
-  
   span {
+    display: block;
     font-family: $Lifehack;
     color: $white;
-    font-size: 65px;
+    font-size: rem(65px);
     line-height: .9;
     letter-spacing: -1.6px;
-    display: block;
+
+
+    @include tablets {
+      padding: 0 10%;
+      text-align: center;
+    }
+
+    @include phones {
+      padding: 0;
+      font-size: rem(54px);
+    }
   }
+}
+
+.hero__title {
+    margin: rem(8px) auto rem(22px);
+    
+  @include phones {
+    font-size: rem(54px);
+  }
+}
+
+.hero-btns {
+  display: flex;
+  align-items: center;
 }
 

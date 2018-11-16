@@ -1,0 +1,114 @@
+
+.menu {
+  position: relative;
+}
+
+.menu__acc {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  max-width: 50%;
+
+  @include desktop {
+  max-width: 65%;
+  }
+
+  @include tablets {
+  max-width: 100%;
+  }
+}
+
+.menu__list {
+  display: flex;
+  height: 100%;
+}
+
+.menu__item {
+  display: flex;
+  height: 100%;
+}
+
+.menu__head {
+  width: 5rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-family: $Gagalin;
+  font-size: 1.875rem;
+  line-height: 1rem;
+  color: $white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s;
+  
+  &:hover {
+    color: $yellow;
+  }
+  
+  h3 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 2.5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($dark-black, .8);
+  }
+}
+
+.menu__body {
+  writing-mode: initial;
+  display: flex;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba($black, .9);
+}
+
+.menu__desc {
+  display: flex;
+  font-family: $Ubuntu;
+  color: $white;
+  font-size: rem(14px);
+  line-height: rem(24px);
+  font-weight: 300;
+}
+
+.menu__item--active {
+  .menu__body {
+    width: 100%;
+    padding: 4.0625rem 2.1875rem;
+    z-index: 20;
+  }
+
+
+  @include phones {
+  + .menu__item {
+      z-index: 10;
+      position: absolute;
+      right: 5rem;
+
+      + .menu__item {
+        position: absolute;
+      }
+    }
+  }
+}
+
+.menu__item:last-child {
+  right: 0;
+}
+
+
+@each $bg in (1, 2, 3) {
+  .menu__head--#{$bg} {
+    background: url(/images/menu-item-#{$bg}.png) center center / cover no-repeat;
+  }
+}

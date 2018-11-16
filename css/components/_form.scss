@@ -1,0 +1,160 @@
+
+.form {
+  display: flex;
+  justify-content: space-between;
+
+  @include desktop {
+    margin-left: rem(20px);
+  }
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+}
+
+.form__block {
+  width: 50%;
+
+  @include tablets {
+    width: 70%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: rem(19px);
+
+  &--row {
+    margin-right: 0;
+  }
+
+  &--options {
+    margin-bottom: rem(22px);
+
+    @include phones {
+      justify-content: center;
+    }
+
+    &:last-child {
+      margin-bottom: rem(20px);
+    }
+  }
+}
+
+.form__item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-right: rem(19px);
+}
+
+.form__name {
+  font-family: $Ubuntu;
+  font-weight: 300;
+  color: $white;
+  margin-bottom: rem(7px);
+
+}
+
+.form__item-input {
+  width: 100%;
+  height: rem(33px);
+  border: rem(2px) solid $white;
+  outline: none;
+  border-radius: rem(5px);
+  padding-left: rem(21px);
+
+  &:focus {
+    border-color: $orange;
+  }
+}
+
+.form__item-text {
+  height: rem(110px);
+  resize: none;
+}
+
+.form__radio,
+.form__checkbox {
+  display: none;
+}
+
+.form__btn {
+  position: relative;
+  margin: 0 rem(20px) 0 rem(30px);
+  cursor: pointer;
+
+  @include tablets {
+    margin-left: rem(35px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: -30px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, $white, rgba($white, .5));
+  }
+
+  &-checkbox {
+    &::before {
+      border-radius: 0;
+    }
+  }
+
+  &-radio::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    opacity: 0;
+    left: -26px;
+    top: 4px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: $orange;
+    transition: all .3s;
+  }
+
+  &-checkbox::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -27px;
+    top: 3px;
+    opacity: 0;
+    background: url(/images/icons/check.svg) center center / cover no-repeat;
+    transition: all .2s;
+  }
+}
+
+.form__radio:checked ~ .form__btn-radio::after {
+  opacity: 1;
+}
+
+.form__checkbox:checked ~ .form__btn-checkbox::after {
+  opacity: 1;
+}
+
+.form__button {
+  margin-right: rem(20px);
+  cursor: pointer;
+  margin-left: 0;
+
+  &--reset {
+    color: $white;
+    font-size: rem(14px);
+    text-transform: none;
+  }
+}

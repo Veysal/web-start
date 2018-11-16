@@ -1,8 +1,11 @@
-/* arrow-scroll */ 
 
 .arrow-scroll {
-  
-  &__pic:hover {
+  height: rem(14px);
+  width: rem(29px);
+}
+.arrow-scroll__btn {
+    
+  &:hover {
     cursor: pointer;
   }
 }

@@ -1,5 +1,3 @@
-/* mixin for base btn styles and hover */
-
 @mixin mix-btn ($text-color, $bg-color, $rad: 4px) {
   color: $text-color;
   background-color: $bg-color;

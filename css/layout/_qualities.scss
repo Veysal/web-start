@@ -9,13 +9,16 @@
     justify-content: center;
   }
 
-  .title {
-    margin-bottom: 60px;
-  }
-
   &-main {
     @include mix-flex ($jc: space-around, $ai: baseline);
-  }
 
-  
+    @include phones {
+      flex-direction: column;
+      // justify-content: flex-start;
+    }
+  }
+}
+
+.qualities__title {
+    margin-bottom: rem(60px);
 }

@@ -1,16 +1,35 @@
-/* base styles */
+
+html {
+  font-size: 16px;
+  user-select: none;
+
+  @include tablets {
+    font-size: 14px; 
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
 
 html, body {
   height: 100%;
   line-height: normal;
 }
 
-body {
+* {
   box-sizing: border-box;
+}
+
+body {
   font-family: 'Gotham Pro', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: default;
+}
+
+p {
+  margin: 0;
 }
 
 a {
@@ -18,6 +37,7 @@ a {
 }
 
 ul {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -43,11 +63,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
   height: 100vh;
-  min-width: 650px;
+  min-width: 320px;
+  min-height: 650px;
 }
 
 .container {
-  width: 940px;
+  max-width: 940px;
   margin: 0 auto;
   height: 100%;
+  
+  @include tablets {
+    width: 95%;
+  }
+
 }

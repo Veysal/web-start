@@ -7,16 +7,34 @@
   width: 100%;
   font-family: $Ubuntu;
   font-weight: 500;
-  line-height: 35px;
-  height: 35px;
+  line-height: rem(35px);
+  height: rem(35px);
   cursor: pointer;
 
   &--red {
-    width: 96px;
+    width: rem(96px);
   }
 
   &--black {
-    width: 110px;
+    width: rem(110px);
     background-color: $black;
+
+    @include phones {
+      display: none;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $dark-black;
+    }
+  }
+
+  &--phones{
+    display: none;
+    width: auto;
+
+    @include phones {
+      display: block;
+    }
   }
 }

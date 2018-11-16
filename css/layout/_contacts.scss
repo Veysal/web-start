@@ -1,0 +1,61 @@
+/* contacts section */
+
+.contacts {
+  background: url(/images/contacts-bg.jpg) center center / cover no-repeat;
+  line-height: rem(24px);
+
+  iframe {
+    @include phones {
+      height: 85.5%;
+    }
+  }
+}
+
+.contacts__address {
+  font-family: $Ubuntu;
+  font-weight: 300;
+  font-style: normal;
+  font-size: rem(14px);
+  color: $white;
+  margin-bottom: rem(10px);
+
+  @include phones {
+    // margin-bottom: rem(5px);
+  }
+}
+
+.contacts__pic {
+  width: rem(12px);
+  height: rem(11px);
+  fill: $orange;
+  transition: all .3s;
+}
+
+.contacts__phone {
+  @include phones {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.contacts__link {
+  width: auto;
+  font-weight: bold;
+  font-style: normal;
+  color: $orange;
+  transition: all .3s;
+
+    
+  @include phones {
+    justify-content: center;
+  }
+
+  &:hover {
+    color: $white;
+    cursor: pointer;
+
+    .contacts__pic {
+      fill: $green;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/* menu stction */
+
+.menu {
+  position: relative;
+  background: url(/images/menu-bg.png) center center / cover no-repeat;
+}
+
+.menu__title {
+  position: absolute;
+  top: 6.875rem;
+  left: 5.625rem;
+}
+

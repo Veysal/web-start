@@ -1,11 +1,17 @@
-/* main-burger */ 
 
 .main-burger {
-  margin-bottom: 50px;
-  margin-right: 12px;
+  margin-right: rem(12px);
   position: relative;
+  width: 50%;
+  margin-bottom: 10%;
+  
+  @include tablets {
+    width: 80%;
+    margin: 0;
+  }
 
   &__img {
-    object-fit: contain;
+    width: 100%;
+    height: auto;
   }
 }
