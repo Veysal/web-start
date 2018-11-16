@@ -1,0 +1,11 @@
+
+.sidebar__btn {
+  display: none;
+  font-size: rem(30px);
+  color: $white;
+  margin-left: rem(20px);
+  
+  @include tablets {
+    display: block;
+  }
+}

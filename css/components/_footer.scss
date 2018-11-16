@@ -1,0 +1,26 @@
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.75rem;
+
+  @include phones {
+    flex-direction: column;
+    height: 7.25rem;
+  }
+}
+
+.footer__left {
+  padding-left: rem(20px);
+
+    
+  @include phones {
+    padding: 0;
+  }
+}
+
+.footer__right {
+  height: auto;
+}
+

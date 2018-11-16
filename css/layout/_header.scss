@@ -1,0 +1,26 @@
+.header {
+  @include mix-flex ($jc: space-between);
+  padding-top: rem(15px);
+
+  &__left {
+    margin-left: rem(10px);
+  }
+
+  &__mid {
+    margin-right: rem(10px);
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;align-items: center;
+    margin-right: rem(20px);
+
+    @include tablets {
+      margin-right: rem(10px);
+    }
+  }
+}

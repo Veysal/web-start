@@ -1,0 +1,50 @@
+
+.nav {
+  margin-left: rem(25px);
+  text-transform: uppercase;
+  font-family: $Ubuntu;
+  display: flex;
+  font-size: rem(13px);
+  justify-content: center;
+  align-items: baseline;
+  
+  @include desktop {
+    font-size: rem(10px);
+    margin-left: 0;
+  }
+}
+
+.nav__list {
+    display: flex;
+  }
+
+.nav__link {
+    color: $white;
+    text-align: left;
+    margin-left: rem(15px);
+    transition: all .2s;
+
+    &:hover {
+      color: $orange;
+    }
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    margin-right: rem(15px);
+
+    &::before {
+      content: "";
+      display: block;
+      width: rem(4px);
+      height: rem(4px);
+      border-radius: 50%;
+      background: $white; 
+    }
+
+  &:first-child::before {
+
+      display: none;
+  }
+}
