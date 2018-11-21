@@ -63,7 +63,34 @@ let slideIndex = 1,
     next = document.querySelector('.slider__arrow-right'),
     prev = document.querySelector('.slider__arrow-left');
 
+    slideShow(slideIndex);
+
+    function slideShow(n){
+      if(n > slideItems.length){
+        slideIndex = 1;
+      };
+      if(n < 1){
+        slideIndex = slideItems.length
+      };
+
+      for(let i = 0; i < slideItems.length; i++){
+        slideItems[i].style.display = 'none';
+      };
+
+      slideItems[slideIndex - 1].style.display = 'flex';
+    }
+
+    function slidePlus(n){
+      slideShow(slideIndex += n)
+    }
     
+    prev.addEventListener('click', ()=>{
+      slidePlus(-1);
+    });
+
+    next.addEventListener('click', ()=>{
+      slidePlus(1);
+    });
 
 
 
