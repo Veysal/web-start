@@ -1,0 +1,65 @@
+/* burger button */
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  width: rem(30px);
+  height: 26px;
+  margin-left: rem(20px);
+  cursor: pointer;
+  z-index: 20;
+
+  &::before,
+  &::after,
+  span {
+    content: "";
+    display: block;
+    border: 2px solid $white;
+    border-radius: 3px;
+    transition: all .2s;
+  }
+
+  &::before {
+    margin-bottom: 6px;
+  }
+
+  &::after {
+    margin-top: 6px;
+  }
+}
+
+.burger-btn--active {
+
+  span {
+    opacity: 0;
+  }
+
+  &::before {
+    margin-bottom: 0px;
+    transform: translatey(11px) rotate(45deg);
+  }
+
+  &::after {
+    margin-top: 0;
+    transform: translatey(3px) rotate(-45deg)
+  }
+}
+
+.burger-btn {
+  @include tablets {
+    display: flex;
+  }
+}
+
+.burger-btn--animation {
+  animation: .3s linear 0s normal none 1 running rotate;
+}
+
+@keyframes rotate {
+  0 {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -19,64 +19,58 @@
       <div class="container">
         <header class="header">
           <div class="header__left">
-            <a href="index.html" class="logo">
-              <svg class="logo__img" width="92" height="69">
-                <use xlink:href="/images/icons/sprite.svg#logo" />
-              </svg>
-            </a>
+            <svg class="logo__img" width="92" height="69">
+              <use xlink:href="/images/icons/sprite.svg#logo" />
+            </svg>
           </div>
           <div class="header__mid">
-            <aside class="nav">
-              <nav class="nav__inner">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a href="" class="nav__link">
-                      о нас
-                    </a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">
-                      бургеры
-                    </a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">
-                      команда
-                    </a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">
-                      меню
-                    </a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">
-                      отзывы
-                    </a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">
-                      как мы работаем
-                    </a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="" class="nav__link">
-                      <span>контакты</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </aside>
+            <nav class="nav" id="nav">
+              <ul class="nav__list" id="nav__list">
+                <li class="nav__item">
+                  <a href="#qualities" class="nav__link">
+                    о нас
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#burgers" class="nav__link">
+                    бургеры
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#team" class="nav__link">
+                    команда
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#menu" class="nav__link">
+                    меню
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#reviews" class="nav__link">
+                    отзывы
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#order" class="nav__link">
+                    как мы работаем
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contacts" class="nav__link">
+                    <span>контакты</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
           <div class="header__right">
             <div class="hero-btns">
-              <a class="btn btn--red">
+              <a href="#order" class="btn btn--red">
                 <span>заказать</span>
               </a>
-              <div class="sidebar">
-                <a class="sidebar__btn">
-                  <span>&#9776;</span>
-                </a>
+              <div class="burger-btn" id="burger-btn">
+                <span></span>
               </div>
             </div>
           </div>
@@ -91,21 +85,22 @@
           </ul>
         </div>
         <div class="hero-bottom">
-          <div class="arrow-scroll__btn">
-            <svg class="arrow-scroll">
+          <div class="arrow arrow--scroll">
+            <svg class="arrow">
               <use xlink:href="/images/icons/sprite.svg#arrow-scroll"></use>
             </svg>
           </div>
         </div>
       </div>
     </section>
+    
 
     <!-- qualities section -->
-    <section class="qualities section">
+    <section class="qualities section" id="qualities">
       <div class="container">
         <h2 class="title title--black qualities__title">мы лучшие</h2>
         <div class="qualities-main">
-          <article class="quality">
+          <div class="quality">
             <div class="quality__img">
               <svg class="quality__pic">
                 <use xlink:href="/images/icons/sprite.svg#meat" />
@@ -121,8 +116,8 @@
                 Ямб неравномерен.
               </p>
             </quality__desc>
-          </article>
-          <article class="quality">
+          </div>
+          <div class="quality">
             <div class="quality__img">
               <svg class="quality__pic">
                 <use xlink:href="/images/icons/sprite.svg#hand" />
@@ -138,8 +133,8 @@
                 Первое полустишие притягивает сюжетный реформаторский пафос.
               </p>
             </div>
-          </article>
-          <article class="quality">
+          </div>
+          <div class="quality">
             <div class="quality__img">
               <svg class="quality__pic">
                 <use xlink:href="/images/icons/sprite.svg#natural" />
@@ -154,13 +149,69 @@
                 Анапест представляет собой анапест.
               </p>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
+    
+
+    <!-- burgers section -->
+    <section class="burgers section" id="burgers">
+      <ul class="slider__container">
+        <div class="arrow slider__arrow slider__arrow-left">
+          <svg class="arrow">
+            <use xlink:href="/images/icons/sprite.svg#arrow-scroll"></use>
+          </svg>
+        </div>
+        <ul class="slider">
+          <li class="slider__item">
+            <div class="burger">
+              <img src="/images/burgers-slider/burger-1.png" alt="burger" class="burger__img">
+              <div class="burger__composition">
+                <svg class="burger__composition-img">
+                  <use xlink:href="/images/icons/sprite.svg#burger"></use>
+                </svg>
+                <span>состав</span>
+              </div>
+              <div class="burger__weight">
+                <span class="burger__weight--large">1200</span>
+                <span class="burger__weight--kkal">ккал</span>
+              </div>
+            </div>
+            <div class="burger__desc">
+              <h2 class="title title--white burger--title">
+                Dark BEEF Burger
+              </h2>
+              <div class="burger__text">
+                <p>
+                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                  тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+                  луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                </p>
+              </div>
+              <div class="burger__order">
+                <div class="burger__cost">
+                  <span class="title title--orange">500</span>
+                  <span>рублей</span>
+                </div>
+                <a href="#order" class="btn btn--red">
+                  <span>заказать</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="arrow slider__arrow slider__arrow-right">
+          <svg class="arrow">
+            <use xlink:href="/images/icons/sprite.svg#arrow-scroll"></use>
+          </svg>
+        </div>
+    </section>
+    
 
     <!-- team section -->
-    <section class="team section">
+    <section class="team section" id="team">
       <div class="team__block">
         <h2 class="title title--yellow team__title">команда</h2>
         <div class="accordeon">
@@ -241,13 +292,14 @@
         </div>
       </div>
     </section>
+    
 
     <!-- menu section -->
-    <section class="menu section">
+    <section class="menu section" id="menu">
       <h2 class="title title--white menu__title">меню</h2>
       <div class="menu__acc">
-        <ul class="menu__list">
-          <li class="menu__item menu__item--active">
+        <ul class="menu__list" id="menu__list">
+          <li class="menu__item">
             <div class="menu__head menu__head--1">
               <h3>для мясоедов</h3>
             </div>
@@ -310,9 +362,10 @@
         </ul>
       </div>
     </section>
+    
 
     <!-- reviews section -->
-    <section class="reviews section">
+    <section class="reviews section" id="reviews">
       <article class="review-block">
         <div class="review-block__img" style="background-image: url(/images/avatar-1.png);">
           <div class="review-block__list">
@@ -490,9 +543,10 @@
         </div>
       </article>
     </section>
+    
 
     <!-- order section -->
-    <section class="order section">
+    <section class="order section" id="order">
       <div class="container">
         <h2 class="title title--yellow order__title">
           закажите доставку
@@ -559,71 +613,74 @@
             </div>
             <div class="form__row form__row--options">
               <button class="btn btn--red form__button" type="submit">
-                  <span>заказать</span>
+                <span>заказать</span>
               </button>
               <button class="form__button form__button--reset" type="reset">
                 <span>Очистить</span>
               </button>
             </div>
           </div>
-      </form>
-  </div>
-
-  </section>
-
-  <!-- contacts section -->
-  <section class="contacts section">
-    
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31647.858267043197!2d30.285535813060466!3d59.947277760784644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696313f9cb68a9d%3A0x863f295f902a26d5!2z0JvQtdC90LjQvdCz0YDQsNC00YHQutC40Lkg0LfQvtC-0L_QsNGA0Lo!5e0!3m2!1sru!2sru!4v1541932237142"
-      width="100%" height="90.8%" frameborder="0" style="border:0" allowfullscreen></iframe>
- 
-
-    <!-- footer -->
-    <footer class="footer container">
-      <div class="footer__left">
-        <address class="contacts__address">
-          <span>
-            Санкт-Петербург, ул.Бабушкина, д.12/1, 15
-          </span>
-        </address>
-        <address class="contacts__phone">
-          <a href="tel:88123771377" class="contacts__link">
-            <svg class="contacts__pic">
-              <use xlink:href="/images/icons/sprite.svg#phone" />
-            </svg>
-            <span> +7 (812) 377-13-77</span>
-          </a>
-        </address>
+        </form>
       </div>
-      <div class="footer__right">
-        <div class="social">
-          <ul class="social__list">
-            <li class="social__item">
-              <svg class="social__pic">
-                <use xlink:href="/images/icons/sprite.svg#vk" />
+
+    </section>
+   
+
+    <!-- contacts section -->
+    <section class="contacts section" id="contacts">
+      <div id="map" class="map"></div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31647.858267043197!2d30.285535813060466!3d59.947277760784644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696313f9cb68a9d%3A0x863f295f902a26d5!2z0JvQtdC90LjQvdCz0YDQsNC00YHQutC40Lkg0LfQvtC-0L_QsNGA0Lo!5e0!3m2!1sru!2sru!4v1541932237142"
+        width="100%" height="90.8%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      
+
+      <!-- footer -->
+      <footer class="footer container">
+        <div class="footer__left">
+          <address class="contacts__address">
+            <span>
+              Санкт-Петербург, ул.Бабушкина, д.12/1, 15
+            </span>
+          </address>
+          <address class="contacts__phone">
+            <a href="tel:88123771377" class="contacts__link">
+              <svg class="contacts__pic">
+                <use xlink:href="/images/icons/sprite.svg#phone" />
               </svg>
-            </li>
-            <li class="social__item">
-              <svg class="social__pic">
-                <use xlink:href="/images/icons/sprite.svg#fb" />
-              </svg>
-            </li>
-            <li class="social__item">
-              <svg class="social__pic">
-                <use xlink:href="/images/icons/sprite.svg#inst" />
-              </svg>
-            </li>
-            <li class="social__item">
-              <svg class="social__pic">
-                <use xlink:href="/images/icons/sprite.svg#twitter" />
-              </svg>
-            </li>
-          </ul>
+              <span> +7 (812) 377-13-77</span>
+            </a>
+          </address>
         </div>
-      </div>
-    </footer>
+        <div class="footer__right">
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item">
+                <svg class="social__pic">
+                  <use xlink:href="/images/icons/sprite.svg#vk" />
+                </svg>
+              </li>
+              <li class="social__item">
+                <svg class="social__pic">
+                  <use xlink:href="/images/icons/sprite.svg#fb" />
+                </svg>
+              </li>
+              <li class="social__item">
+                <svg class="social__pic">
+                  <use xlink:href="/images/icons/sprite.svg#inst" />
+                </svg>
+              </li>
+              <li class="social__item">
+                <svg class="social__pic">
+                  <use xlink:href="/images/icons/sprite.svg#twitter" />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+     
 
-  </section>
+    </section>
+    
 
   </div>
 
@@ -656,6 +713,10 @@
       </li>
     </ul>
   </div>
+  
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript">
+  </script>
+  <script src="/js/script.js"></script>
 
 </body>
 

@@ -1,4 +1,4 @@
-
+/* review-block */
 
 .review-block {
   flex: 1 1 25%;
@@ -42,7 +42,7 @@
   opacity: 0;
 
   @include tablets {
-    padding: 5% ;
+    padding: 5% 10%;
     align-items: center;
   }
   
@@ -66,7 +66,7 @@
     margin-bottom: rem(30px);
 
     @include tablets {
-      margin-bottom: rem(-7px);
+      margin-bottom: 5%;
     }
 
     @include phones {

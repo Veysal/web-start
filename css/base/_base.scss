@@ -1,3 +1,4 @@
+/* base styles */
 
 html {
   font-size: 16px;
@@ -71,9 +72,4 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 940px;
   margin: 0 auto;
   height: 100%;
-  
-  @include tablets {
-    width: 95%;
-  }
-
 }

@@ -1,0 +1,178 @@
+/* burgers section */ 
+
+.burgers {
+  background-image: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  font-family: $Gagalin;
+  font-size: rem(14px);
+  color: $white;
+  line-height: rem(28px);
+    
+  @include tablets {
+    width: 100%;
+    align-items: flex-end;
+  }
+}
+
+.burger__img {
+  max-width: 100%;
+}
+
+.burger__composition {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: rem(20px);
+  top: 15%;
+  padding-top: rem(5px);
+  width: rem(90px);
+  height: rem(90px);
+  background: rgba($orange, .5);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+   
+  @include tablets {
+    top: rem(80px);
+  }
+  @include phones {
+    left: rem(-30px);
+  }
+
+  &:hover {
+    background: rgba($orange, 1);
+  }
+  
+
+  &-img {
+    height: 44px;
+    width: 46px;
+  }
+}
+.burger__weight {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  width: rem(90px);
+  height: rem(90px);
+  bottom: 15%;
+  left: rem(20px);
+  opacity: .6;
+  background: url(/images/icons/kkal.svg) 50% 27% no-repeat;
+  background-size: 60px 60px;
+
+  @include tablets {
+    background-position: 50% 0;
+    top: rem(80px);
+    right: 0;
+    left: auto ;
+  }
+
+  @include phones {
+    top: rem(80px);
+    right: rem(-30px);
+    left: auto ;
+  }
+
+  &--large {
+    font-size: 20px;
+  }
+
+  span {
+    margin-left: 1px;
+
+    @include tablets {
+      margin-top: 5px;
+    }
+
+    @include tablets {
+      transform: translateY(rem(5px));
+    }
+  }
+}
+
+
+.burger__desc {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+      
+  @include desktop {
+    width: 50%;
+  }
+  
+  @include tablets {
+    width: 80%;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.burger--title {
+  margin-bottom: rem(56px);
+
+  @include tablets {
+    margin-bottom: rem(50px);
+  }
+
+  @include phones {
+    margin-bottom: 5%;
+  }
+}
+
+.burger__text {
+  font-family: $Ubuntu;
+  font-weight: 300;
+  color: $white;
+  line-height: rem(24px);
+  margin-bottom: rem(36px);
+
+  
+  @include tablets {
+    margin-bottom: 5%;
+  }
+  
+  @include phones {
+    margin-bottom: 0;
+  }
+}
+
+.burger__order {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+        
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.burger__cost {
+  font-family: $Gagalin;
+  font-size: rem(30px);
+  color: $orange;
+  margin-right: rem(29px);
+}
+

@@ -44,9 +44,9 @@
 
 
 .hero__description {
-  max-width: 100%;
+  max-width: 45%;
 
-  @include tablets {
+  @include desktop {
     max-width: 100%;
   }
   span {

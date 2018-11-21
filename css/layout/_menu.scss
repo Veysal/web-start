@@ -3,11 +3,18 @@
 .menu {
   position: relative;
   background: url(/images/menu-bg.png) center center / cover no-repeat;
+  display: flex;
 }
 
 .menu__title {
-  position: absolute;
-  top: 6.875rem;
-  left: 5.625rem;
+  display: flex;
+  margin-top: 10%; 
+  margin-left: 10%;
+
+  
+  @include phones {
+    margin-top: 20%; 
+    margin-left: 5%;
+  }
 }
 

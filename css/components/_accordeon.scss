@@ -1,3 +1,4 @@
+/* accordeon block */
 
 .accordeon {
   &__head {
@@ -161,6 +162,8 @@
   }
 }
 
+
+// set bg for each item
 
 @each $bg in (1, 2, 3) {
   .accordeon--menu .accordeon__head--#{$bg} {

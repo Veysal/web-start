@@ -1,4 +1,6 @@
 
+/* title */ 
+
 .title {
   font-size: rem(72px);
   font-family: $Gagalin;
@@ -13,6 +15,10 @@
 
   &--yellow {
     color: $yellow;
+  }
+
+  &--orange {
+    color: $orange;
   }
 
   &--black {
