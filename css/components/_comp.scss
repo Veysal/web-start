@@ -1,0 +1,53 @@
+/* composition item */
+
+.comp__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: rem(10px) rem(20px);
+  font-family: $Ubuntu;
+  color: $black;
+  line-height: rem(24px);
+}
+
+.comp__wrap {
+  display: flex;
+  
+  width: 100%;
+}
+
+.comp__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: rem(10px) rem(20px) rem(10px) 0;
+}
+
+.comp__img {
+  display: flex;
+  justify-content: center;
+}
+
+.comp__name {
+  font-weight: 500;
+  margin-left: rem(25px);
+}
+
+.comp__text {
+  font-weight: 300;
+  margin-left: auto;
+}
+
+.comp__btn {
+  display: none;
+  margin-left: auto;
+  z-index: 100;
+  padding: rem(20px);
+  height: 100%;
+
+  @include tablets {
+    display: flex;
+  }
+}

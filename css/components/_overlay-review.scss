@@ -1,0 +1,48 @@
+/* review`s modal window  */ 
+
+.overlay__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  background-color: rgba($dark-black, .8);
+}
+
+.overlay__block {
+  position: relative;
+  width: 40%;
+  background-color: $white;
+  border-radius: 5px;
+  padding: rem(30px) rem(20px);
+
+  @include desktop {
+    width: 60%;
+  }
+
+  @include phones {
+    width: 95%;
+  }
+}
+
+.overlay__name {
+  display: block;
+  font-family: $Gagalin;
+  line-height: rem(28px);
+  margin-bottom: rem(30px);
+}
+
+.overlay__text {
+  font-family: $Ubuntu;
+  line-height: rem(24px)
+}
+
+.overlay__close {
+  position: absolute;
+  top: rem(20px);
+  right: rem(20px);
+}
