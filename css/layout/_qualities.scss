@@ -1,7 +1,7 @@
 /* qualities section */
 
 .qualities {
-  background: url(/images/bg.png) center center / cover no-repeat;
+  background: url(./images/bg.png) center center / cover no-repeat;
   
   .container {
     @include mix-flex ($jc: center);

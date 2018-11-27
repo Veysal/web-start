@@ -121,7 +121,6 @@
 .menu__item--active {
   @include phones {
   + .menu__item {
-      // z-index: 10;
       position: absolute;
       right: 5rem;
 
@@ -137,10 +136,10 @@
 }
 
 
-// set bg for each item
+
 
 @each $bg in (1, 2, 3) {
   .menu__head--#{$bg} {
-    background: url(/images/menu-item-#{$bg}.png) center center / cover no-repeat;
+    background: url(./images/menu-item-#{$bg}.png) center center / cover no-repeat;
   }
 }
