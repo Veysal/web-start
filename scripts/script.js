@@ -57,13 +57,16 @@ for(let i = 0; i < menuItem.length; i++){
 
 $(document).ready(function(){
   $(function(){
-    let slideNow = 1;
-    let slideCount = $('.slider').children().length;
+    var slideNow = 1;
+    var slideCount = $('.slider').children().length;
     console.log(slideCount);
   
     let slideTime = 3000;
   
-    setInterval(nexSlide, slideTime)
+     setInterval(nexSlide, slideTime);
+    
+    $('.slider__arrow-right').on('click', nexSlide);
+    $('.slider__arrow-left').on('click', prevSlide);
   
   
     function nexSlide(){
@@ -81,7 +84,23 @@ $(document).ready(function(){
       }
     }
   });
-  });
+
+  function prevSlide(){
+    if(slideNow = 1 || slideNow <= 0){
+      let translateWidth = -$('.slider__wrap').width() * (slideCount - 1);
+      $('.slider').css({
+        'transform': 'translate('+translateWidth+'px,0)'
+      });
+      slideNow = slideCount;
+    }else {
+      let translateWidth = -$('.slider__wrap').width() * (slideNow - 2);
+      $('.slider').css({
+        'transform': 'translate('+translateWidth+'px,0)'
+      });
+      slideNow--;
+    }
+  }
+});
 
 
 //slider
