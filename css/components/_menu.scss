@@ -140,6 +140,6 @@
 
 @each $bg in (1, 2, 3) {
   .menu__head--#{$bg} {
-    background: url(./images/menu-item-#{$bg}.png) center center / cover no-repeat;
+    background: url(/images/menu-item-#{$bg}.png) center center / cover no-repeat;
   }
 }
