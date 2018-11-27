@@ -238,4 +238,22 @@ function createOverlay(name, text) {
      }
 
 
+  // Yandex maps
+  ymaps.ready(init);
+  function init(){ 
+      // Создание карты.    
+      var myMap = new ymaps.Map("map", {
+          center: [59.94, 30.31],
+          zoom: 12,
+          behaviors: ['drag']
+      });
+
+      var placemark = new ymaps.Placemark([59.96, 30.31],{
+        hintContent: 'Это хинт',
+        balloonContent: 'Это балун'
+      });
+
+      myMap.geoObjects.add(placemark)
+  }
+
 
