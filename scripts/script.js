@@ -53,50 +53,50 @@ for(let i = 0; i < menuItem.length; i++){
 }
 
 
-//slider
+// //slider
 
-const left = document.querySelector('.slider__arrow-left'),
-      right = document.querySelector('.slider__arrow-right'),
-      items = document.querySelector('.slider'),
-      computed = getComputedStyle(items),
-      step = parseInt(getComputedStyle(items.firstElementChild).width),
-      size = items.children.length - 1,
-      maxRight = size * step,
-      minRight = 0;
+// const left = document.querySelector('.slider__arrow-left'),
+//       right = document.querySelector('.slider__arrow-right'),
+//       items = document.querySelector('.slider'),
+//       computed = getComputedStyle(items),
+//       step = parseInt(getComputedStyle(items.firstElementChild).width),
+//       size = items.children.length - 1,
+//       maxRight = size * step,
+//       minRight = 0;
 
-right.addEventListener("click", (e) => {
-  e.preventDefault();
-  let currentRight = parseInt(computed.right);
+// right.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   let currentRight = parseInt(computed.right);
 
-  if (!currentRight) {
-    currentRight = 0;
-  }
+//   if (!currentRight) {
+//     currentRight = 0;
+//   }
 
-  if (currentRight < maxRight) {
-    items.style.right = currentRight + step + "px";
-  } else {
-    currentRight = 0;
-    items.style.right = minRight;
-  }
+//   if (currentRight < maxRight) {
+//     items.style.right = currentRight + step + "px";
+//   } else {
+//     currentRight = 0;
+//     items.style.right = minRight;
+//   }
 
-});
+// });
 
-left.addEventListener("click", (e) => {
-  e.preventDefault();
-  let currentRight = parseInt(computed.right);
+// left.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   let currentRight = parseInt(computed.right);
 
-  if (!currentRight) {
-    currentRight = 0;
-  }
+//   if (!currentRight) {
+//     currentRight = 0;
+//   }
 
-  if (currentRight > minRight) {
-    items.style.right = currentRight - step + "px";
-  } else {
-    currentRight = maxRight;
-    items.style.right = maxRight;
-  }
+//   if (currentRight > minRight) {
+//     items.style.right = currentRight - step + "px";
+//   } else {
+//     currentRight = maxRight;
+//     items.style.right = maxRight;
+//   }
 
-});
+// });
 
 
 // overlay
