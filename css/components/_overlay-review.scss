@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -45,4 +45,16 @@
   position: absolute;
   top: rem(20px);
   right: rem(20px);
+}
+
+.overlay__response {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay__message {
+  margin-bottom: rem(25px);
 }

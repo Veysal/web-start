@@ -27,6 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: default;
+  overflow: hidden;
 }
 
 p {
@@ -55,17 +56,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
-  overflow: hidden;
-  min-width: 100%;
-  min-height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  top: 0;
+  will-change: top;
+  transition-timing-function: ease;
 }
 
 .section {
-  height: 100vh;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   min-width: 320px;
-  min-height: 650px;
+  // min-height: 650px;
 }
 
 .container {

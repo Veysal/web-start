@@ -39,7 +39,8 @@
 
   &-bottom {
     @include mix-flex($jc: center);
-    margin-bottom: rem(40px);
+    // margin-bottom: rem(40px);
+    height: 10%;
   }
 }
 
@@ -65,7 +66,7 @@
     }
 
     @include phones {
-      padding: 0;
+      // padding: 0;
       font-size: rem(54px);
     }
   }

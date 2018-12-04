@@ -1,0 +1,59 @@
+/* pagination styles*/ 
+
+.dots {
+  position: fixed;
+  top: rem(80px);
+  right: rem(46px);
+
+  @include tablets {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    position: relative;
+    width: rem(16px);
+    height: rem(16px);
+    margin-bottom: rem(5px);
+  }
+
+  &__link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    border: rem(1px) solid $white;
+  }
+  
+  &__link::before {
+    width: rem(4px);
+    height: rem(4px);
+    background-color: $white;
+  }
+}
+
+.dots__item {
+  .dots__link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    border: rem(1px) solid $white;
+    width: rem(14px);
+    height: rem(14px);
+    top: rem(-5px);
+    left: rem(-5px);
+    opacity: 0;
+    transform: scale(0);
+    transition: all .3s ease;
+  }
+}
+
+.active .dots__link::after {
+  transform: scale(1);
+  opacity: 1;
+}

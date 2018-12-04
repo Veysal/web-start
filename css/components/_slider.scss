@@ -51,14 +51,13 @@
   width: 100%;
   right: 0;
   will-change: right;
-  transition: all .5s;
+  transition: all .5s ease;
 }
 
 .slider__wrap {
   display: flex;
   overflow: hidden;
   width: 100%;
-  position: relative;
 }
 
 .slider__item {

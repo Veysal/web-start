@@ -50,4 +50,8 @@
   @include tablets {
     display: flex;
   }
+
+  @include phones {
+    padding: rem(20px) rem(20px) 0 0;
+  }
 }

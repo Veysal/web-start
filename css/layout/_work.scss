@@ -1,0 +1,41 @@
+/* work section */ 
+
+.work {
+  background: url(/images/bg-work.png) center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.work--title {
+  margin-top: rem(83px);
+  text-align: center;
+
+  @include phones {
+    margin-top: 40%;
+  }
+}
+
+.work__player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-top: rem(50px);
+}
+
+.work__video-window {
+  width: 59.97%;
+  height: 100%;
+
+  @include desktop {
+    width: 69.97%;
+  }
+
+  @include tablets {
+    width: 94.97%;
+  }
+}

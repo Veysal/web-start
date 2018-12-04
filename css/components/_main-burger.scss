@@ -7,8 +7,12 @@
   margin-bottom: 10%;
   
   @include tablets {
-    width: 80%;
+    width: 70%;
     margin: 0;
+  }
+  
+  @include phones {
+    width: 80%;
   }
 
   &__img {

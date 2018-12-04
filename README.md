@@ -1,2 +1,2 @@
 # Burgers
-My first adaptive landing page with JS
+My first adaptive landing

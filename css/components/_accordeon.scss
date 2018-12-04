@@ -12,7 +12,8 @@
     color: $white;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all .3s;
+    will-change: height;
+    transition: all .3s ease;
     
     @include tablets {
       justify-content: center;
@@ -48,8 +49,9 @@
   .accordeon__head {
     color: $yellow;
     &::before {
-      border-top: rem(7px) solid $yellow;
-      border-bottom: none;
+      // border-top: rem(7px) solid $yellow;
+      // border-bottom: none;
+      transform: rotate(180deg) translateY(-4px);
     }
   }
   .accordeon__body {
@@ -107,9 +109,10 @@
   &::before {
     content: "";
     display: block;
-    border: rem(5px) solid transparent;
-    border-bottom: rem(7px) solid $yellow;
+    border: 5px solid transparent;
+    border-bottom: 7px solid $yellow;
     margin-right: 1.6%;
+    transition: transform .3s ease;
   }
 }
 

@@ -42,7 +42,7 @@
     @include phones {
       justify-content: center;
     }
-
+    
     &:last-child {
       margin-bottom: rem(20px);
     }
@@ -50,6 +50,7 @@
 }
 
 .form__item {
+  position: relative;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -157,5 +158,18 @@
     color: $white;
     font-size: rem(14px);
     text-transform: none;
+  }
+}
+
+.form__error {
+  position: absolute;
+  top: 103%;
+  opacity: 0;
+  color: $orange;
+  font-size: .8rem;
+  transition: opacity .2s;
+
+  &--active {
+    opacity: 1;
   }
 }
