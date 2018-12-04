@@ -49,8 +49,6 @@
   .accordeon__head {
     color: $yellow;
     &::before {
-      // border-top: rem(7px) solid $yellow;
-      // border-bottom: none;
       transform: rotate(180deg) translateY(-4px);
     }
   }
@@ -173,10 +171,8 @@
 }
 
 
-// set bg for each item
-
 @each $bg in (1, 2, 3) {
   .accordeon--menu .accordeon__head--#{$bg} {
-    background: url(/images/menu-item-#{$bg}.png) center center / cover no-repeat;
+    background: url(../images/menu-item-#{$bg}.png) center center / cover no-repeat;
   }
 }
