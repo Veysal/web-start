@@ -1,0 +1,9 @@
+/* map styles */
+
+.map__item {
+  display: flex;
+  flex-direction: column;
+  font-family: $Ubuntu;
+  color: $black;
+  height: auto;
+}

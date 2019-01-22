@@ -1,0 +1,22 @@
+/* main-burger */ 
+
+.main-burger {
+  margin-right: rem(12px);
+  position: relative;
+  width: 50%;
+  margin-bottom: 10%;
+  
+  @include tablets {
+    width: 70%;
+    margin: 0;
+  }
+  
+  @include phones {
+    width: 80%;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}

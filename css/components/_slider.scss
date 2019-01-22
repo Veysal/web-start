@@ -1,0 +1,75 @@
+/* slider */
+
+.slider__container {
+  display: flex;
+  height: 72.3%;
+  padding: 0 4.45%;
+  overflow: hidden;
+
+  @include tablets {
+    height: 100%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+}
+
+
+.slider__arrow{
+  display: flex;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+
+  &-left{
+    justify-content: flex-end;
+  }
+
+  &-right{
+    justify-content: flex-start;
+  }
+
+  &-left svg{
+    transform: rotate(90deg);
+    margin-left: 10px;
+    
+  }
+
+  &-right svg{
+    transform: rotate(-90deg);
+  }
+
+  .arrow {
+    height: 15px;
+  }
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  width: 100%;
+  right: 0;
+  will-change: right;
+  transition: all .5s ease;
+}
+
+.slider__wrap {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider__item {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+    
+  @include tablets {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

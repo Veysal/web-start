@@ -1,0 +1,32 @@
+
+/* title */ 
+
+.title {
+  font-size: rem(72px);
+  font-family: $Gagalin;
+
+  @include tablets {
+    font-size: rem(68px);
+  }
+
+  @include phones {
+    font-size: rem(64px);
+  }
+
+  &--yellow {
+    color: $yellow;
+  }
+
+  &--orange {
+    color: $orange;
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--white {
+    color: $white;
+  }
+}
+

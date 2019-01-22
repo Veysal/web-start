@@ -1,0 +1,24 @@
+/* qualities section */
+
+.qualities {
+  background: url(../images/bg.png) center center / cover no-repeat;
+  
+  .container {
+    @include mix-flex ($jc: center);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-main {
+    @include mix-flex ($jc: space-around, $ai: baseline);
+
+    @include phones {
+      flex-direction: column;
+      // justify-content: flex-start;
+    }
+  }
+}
+
+.qualities__title {
+    margin-bottom: rem(60px);
+}

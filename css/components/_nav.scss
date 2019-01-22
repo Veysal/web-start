@@ -1,0 +1,126 @@
+/* nav styles */
+
+.nav {
+  margin-left: rem(25px);
+  text-transform: uppercase;
+  font-family: $Ubuntu;
+  display: flex;
+  font-size: rem(13px);
+  justify-content: center;
+  align-items: baseline;
+  transition: all .3s;
+  
+  @include desktop {
+    font-size: rem(10px);
+    margin-left: 0;
+  }
+  
+  @include tablets {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: rem(24px);
+    background-color: rgba($black, .95);
+    transform: translate(-100%);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    will-change: opacity, transform;
+    
+    .nav__item {
+      opacity: 0;
+      transform: scale(0);
+      transition: all .3s;
+    }
+  }
+}
+
+
+.nav--active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+
+  
+  .nav__item {
+    opacity: 1;
+    transform: scale(1);
+
+    &:nth-child(1) {
+      transition-delay: .1s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: .13s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: .16s;
+    }
+
+    &:nth-child(4) {
+      transition-delay: .19s;
+    }
+
+    &:nth-child(5) {
+      transition-delay: .21s;
+    }
+
+    &:nth-child(6) {
+      transition-delay: .24s;
+    }
+
+    &:nth-child(7) {
+      transition-delay: .27s;
+    }
+  }
+}
+
+.nav__list {
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.nav__link {
+  color: $white;
+  text-align: left;
+  margin-left: 15px;
+  transition: all .2s;
+  &:hover {
+    color: $orange;
+  }
+  @include tablets {
+    margin: 0;
+  }
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  &::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: $white;
+    @include tablets {
+      width: 7px;
+      height: 7px;
+      margin: rem(28px) 0;
+    }
+  }
+  &:first-child::before {
+    display: none;
+  }
+  @include tablets {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,77 @@
+/* btn */
+
+.btn {
+  @include mix-btn ($white, $orange);
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-family: $Ubuntu;
+  font-weight: 500;
+  line-height: rem(35px);
+  height: rem(35px);
+  cursor: pointer;
+
+  &--red {
+    width: rem(96px);
+  }
+
+  &--black {
+    width: rem(110px);
+    background-color: $black;
+
+    @include phones {
+      display: none;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $dark-black;
+    }
+  }
+
+  &--phones{
+    display: none;
+    width: auto;
+
+    @include phones {
+      display: block;
+    }
+  }
+}
+
+.btn:active {
+  border-color: none;
+}
+
+.btn--close {
+  span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+
+    &::before,
+    &::after,
+    span {
+      content: "";
+      display: block;
+      width: 100%;
+      background-color: $orange;
+      border: 2px solid $orange;
+      border-radius: 3px;
+      transition: all .2s;
+    }
+  
+    &::before {
+      margin-bottom: 0px;
+      transform: translatey(4px) rotate(45deg);
+    }
+  
+    &::after {
+      margin-top: 0;
+      transform: rotate(-45deg)
+    }
+  }
+}

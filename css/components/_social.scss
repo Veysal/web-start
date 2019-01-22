@@ -1,0 +1,25 @@
+/* social block */
+
+
+.social__list {
+  display: flex;
+
+  @include phones {
+    margin-left: rem(20px);
+    margin-bottom: rem(20px);
+  }
+}
+
+.social__pic {
+  width: rem(20px);
+  height: rem(20px);
+  margin-right: rem(20px);
+  opacity: .3;
+  transition: all .2s;
+
+  &:hover {
+    opacity: .9;
+    cursor: pointer;
+  }
+}
+

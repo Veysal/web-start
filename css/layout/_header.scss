@@ -1,0 +1,20 @@
+.header {
+  @include mix-flex ($jc: space-between);
+  padding-top: rem(15px);
+
+  &__left {
+    margin-left: rem(10px);
+    z-index: 30;
+  }
+
+  &__mid {
+    margin-right: rem(10px);
+    z-index: 20;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;align-items: center;
+    margin-right: rem(20px);
+  }
+}

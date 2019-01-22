@@ -1,0 +1,19 @@
+/* order section */
+
+.order {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/order-bg.jpg) center center / cover no-repeat;
+}
+
+.order__title {
+  text-align: center;
+  margin: rem(130px) auto rem(50px);
+
+  @include phones {
+    margin: 10% auto 10%;
+  }
+}

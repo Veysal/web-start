@@ -1,0 +1,81 @@
+/* base styles */
+
+html {
+  font-size: 16px;
+  user-select: none;
+
+  @include tablets {
+    font-size: 14px; 
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
+html, body {
+  height: 100%;
+  line-height: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gotham Pro', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  top: 0;
+  will-change: top;
+  transition-timing-function: ease;
+}
+
+.section {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  min-width: 320px;
+  // min-height: 650px;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  height: 100%;
+}

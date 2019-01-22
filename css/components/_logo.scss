@@ -1,0 +1,15 @@
+/* logo */
+
+.logo {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all .2s;
+
+
+  &:hover {
+    transform: scale(.9);
+    cursor: pointer;
+  }
+}

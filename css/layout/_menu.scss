@@ -1,0 +1,20 @@
+/* menu stction */
+
+.menu {
+  position: relative;
+  background: url(../images/menu-bg.png) center center / cover no-repeat;
+  display: flex;
+}
+
+.menu__title {
+  display: flex;
+  margin-top: 10%; 
+  margin-left: 10%;
+
+  
+  @include phones {
+    margin-top: 20%; 
+    margin-left: 5%;
+  }
+}
+
